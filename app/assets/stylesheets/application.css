@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+.map {
+  width: 500px;
+  height: 500px
+}
+
+/*api key: AIzaSyCRN-3vDkHFchcUs02sBAab7qEl9wGa-Mk*/

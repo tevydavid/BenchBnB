@@ -3,12 +3,17 @@
 <head>
   <title>Bench BnB</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </head>
 <body>
+  <script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRN-3vDkHFchcUs02sBAab7qEl9wGa-Mk"
+  type="text/javascript">
+  </script>
 
 <%= yield %>
 
+</script>
 </body>
 </html>

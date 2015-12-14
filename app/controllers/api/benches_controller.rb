@@ -4,6 +4,14 @@ class Api::BenchesController < ApplicationController
   end
 
   def create
+    @bench =Bench.new(bench_params)
+    @bench.save
+  end
+
+  private
+
+  def bench_params
+    params.require(:bench).permit(:lat, :lng, :description, :seating)
   end
 
 end

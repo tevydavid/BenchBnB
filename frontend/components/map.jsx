@@ -15,6 +15,10 @@ var Map = React.createClass({
     this.map.addListener('idle', function(){
           ApiUtil.fetchBenches(this.getRequestParams());
     }.bind(this));
+    this.map.addListener('click', function(e){
+      var latLng = {lat: e.latLng.lat(), lng: e.latLng.lng()}
+      this.props.clickMapHandler(latLng);
+    }.bind(this));
   },
 
   getRequestParams: function(){
@@ -32,10 +36,11 @@ var Map = React.createClass({
   },
 
   addMarkers: function(){
-    BenchStore.all().forEach(function (bench){
+    BenchStore.all().forEach(function (bench, idx){
       new google.maps.Marker({
         position: bench,
         map: this.map,
+        label: (idx + 1).toString(),
         title: bench.description
       });
     }.bind(this));

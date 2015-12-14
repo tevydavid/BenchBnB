@@ -20,6 +20,11 @@ switch(payload.actionType) {
     var result = resetBenches(payload.benches);
     BenchStore.__emitChange();
     break;
+
+  case BenchConstants.BENCH_RECEIVED:
+    _benches.push(payload.bench)
+    BenchStore.__emitChange();
+    break;
   }
 }
 

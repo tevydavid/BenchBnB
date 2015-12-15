@@ -22,6 +22,7 @@ var Index = React.createClass({
       return (
         <ul className='bench-list-item' key={idx}>{idx + 1}
           <li>{bench.description}</li>
+          <li>Seats: {bench.seating}</li>
           <li>{bench.lat}</li>
           <li>{bench.lng}</li>
         </ul>

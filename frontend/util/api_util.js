@@ -2,11 +2,11 @@ var ApiActions = require('../actions/api_actions')
 
 
 ApiUtil = {
-  fetchBenches: function(mapBoarders){
+  fetchBenches: function(filterParams){
     $.ajax({
       url: 'api/benches',
       type: 'GET',
-      data: {bounds: mapBoarders},
+      data: {bounds: filterParams},
       success: function(benches){
         ApiActions.receiveAll(benches);
       }

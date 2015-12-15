@@ -11,7 +11,7 @@ var BenchForm = React.createClass({
       lat: this.props.location.query.lat,
       lng: this.props.location.query.lng,
       description: "",
-      numPeople: 1})
+      numPeople: 2})
   },
 
   handleSubmit: function(e){
